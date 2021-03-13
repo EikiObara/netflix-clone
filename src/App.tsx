@@ -1,24 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import requests from './utils/request';
+import Row from './components/Row';
+import Banner from './components/Banner';
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Banner />
+      <Row
+        title="OSHIFLIX ORIGINALS"
+        fetchUrl={requests.feachNetflixOriginals}
+        isLargeRow
+      />
+      <Row title="Top Rated" fetchUrl={requests.feachTopRated}/>
+      <Row title="Action Movies" fetchUrl={requests.feachActionMovies}/>
+      <Row title="Comedy Movies" fetchUrl={requests.feachComedyMovies}/>
+      <Row title="Horror Movies" fetchUrl={requests.feachHorrorMovies}/>
+      <Row title="Romance Movies" fetchUrl={requests.feachRomanceMovies}/>
+      <Row title="Documentaries" fetchUrl={requests.feachDocumentMovies}/>
     </div>
   );
 }
