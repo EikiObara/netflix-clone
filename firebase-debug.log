@@ -1,0 +1,227 @@
+[debug] [2021-03-20T13:37:55.310Z] ----------------------------------------------------------------------
+[debug] [2021-03-20T13:37:55.312Z] Command:       /home/rordy_rose/.nvm/versions/node/v14.16.0/bin/node /home/rordy_rose/.nvm/versions/node/v14.16.0/bin/firebase init
+[debug] [2021-03-20T13:37:55.312Z] CLI Version:   9.6.1
+[debug] [2021-03-20T13:37:55.312Z] Platform:      linux
+[debug] [2021-03-20T13:37:55.312Z] Node Version:  v14.16.0
+[debug] [2021-03-20T13:37:55.313Z] Time:          Sat Mar 20 2021 22:37:55 GMT+0900 (Japan Standard Time)
+[debug] [2021-03-20T13:37:55.313Z] ----------------------------------------------------------------------
+[debug] [2021-03-20T13:37:55.313Z] 
+[debug] [2021-03-20T13:37:55.316Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-03-20T13:37:55.316Z] > authorizing via signed-in user
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /home/rordy_rose/netflix-clone
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project. 
+[debug] [2021-03-20T13:38:31.391Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-03-20T13:38:31.392Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-03-20T13:38:31.548Z] <<< HTTP RESPONSE 200 {"cache-control":"no-cache, no-store, max-age=0, must-revalidate","pragma":"no-cache","date":"Sat, 20 Mar 2021 13:38:30 GMT","expires":"Mon, 01 Jan 1990 00:00:00 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-03-20T13:38:31.555Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects  
+ {"projectId":"netflix-clone","name":"netflix-clone"}
+[debug] [2021-03-20T13:38:32.372Z] <<< HTTP RESPONSE 409 {"vary":"X-Origin, Referer, Origin,Accept-Encoding","content-type":"application/json; charset=UTF-8","date":"Sat, 20 Mar 2021 13:38:31 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=649","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-03-20T13:38:32.372Z] <<< HTTP RESPONSE BODY {"error":{"code":409,"message":"Requested entity already exists","status":"ALREADY_EXISTS"}}
+[debug] [2021-03-20T13:38:32.375Z] FirebaseError: HTTP Error: 409, Requested entity already exists
+    at module.exports (/home/rordy_rose/.nvm/versions/node/v14.16.0/lib/node_modules/firebase-tools/lib/responseToError.js:38:12)
+    at Request._callback (/home/rordy_rose/.nvm/versions/node/v14.16.0/lib/node_modules/firebase-tools/lib/api.js:41:35)
+    at Request.self.callback (/home/rordy_rose/.nvm/versions/node/v14.16.0/lib/node_modules/firebase-tools/node_modules/request/request.js:185:22)
+    at Request.emit (events.js:315:20)
+    at Request.EventEmitter.emit (domain.js:467:12)
+    at Request.<anonymous> (/home/rordy_rose/.nvm/versions/node/v14.16.0/lib/node_modules/firebase-tools/node_modules/request/request.js:1154:10)
+    at Request.emit (events.js:315:20)
+    at Request.EventEmitter.emit (domain.js:467:12)
+    at IncomingMessage.<anonymous> (/home/rordy_rose/.nvm/versions/node/v14.16.0/lib/node_modules/firebase-tools/node_modules/request/request.js:1076:12)
+    at Object.onceWrapper (events.js:421:28)
+    at IncomingMessage.emit (events.js:327:22)
+    at IncomingMessage.EventEmitter.emit (domain.js:467:12)
+    at endReadableNT (internal/streams/readable.js:1327:12)
+    at processTicksAndRejections (internal/process/task_queues.js:80:21)
+[error] 
+[error] Error: Failed to create project because there is already a project with ID netflix-clone. Please try again with a unique project ID.
+[debug] [2021-03-20T13:38:42.472Z] ----------------------------------------------------------------------
+[debug] [2021-03-20T13:38:42.474Z] Command:       /home/rordy_rose/.nvm/versions/node/v14.16.0/bin/node /home/rordy_rose/.nvm/versions/node/v14.16.0/bin/firebase init
+[debug] [2021-03-20T13:38:42.474Z] CLI Version:   9.6.1
+[debug] [2021-03-20T13:38:42.474Z] Platform:      linux
+[debug] [2021-03-20T13:38:42.474Z] Node Version:  v14.16.0
+[debug] [2021-03-20T13:38:42.475Z] Time:          Sat Mar 20 2021 22:38:42 GMT+0900 (Japan Standard Time)
+[debug] [2021-03-20T13:38:42.475Z] ----------------------------------------------------------------------
+[debug] [2021-03-20T13:38:42.475Z] 
+[debug] [2021-03-20T13:38:42.477Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-03-20T13:38:42.478Z] > authorizing via signed-in user
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /home/rordy_rose/netflix-clone
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project. 
+[debug] [2021-03-20T13:38:58.363Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects  
+ {"projectId":"netflix-clone","name":"abcde"}
+[debug] [2021-03-20T13:38:59.090Z] <<< HTTP RESPONSE 409 {"vary":"X-Origin, Referer, Origin,Accept-Encoding","content-type":"application/json; charset=UTF-8","date":"Sat, 20 Mar 2021 13:38:58 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=632","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-03-20T13:38:59.090Z] <<< HTTP RESPONSE BODY {"error":{"code":409,"message":"Requested entity already exists","status":"ALREADY_EXISTS"}}
+[debug] [2021-03-20T13:38:59.092Z] FirebaseError: HTTP Error: 409, Requested entity already exists
+    at module.exports (/home/rordy_rose/.nvm/versions/node/v14.16.0/lib/node_modules/firebase-tools/lib/responseToError.js:38:12)
+    at Request._callback (/home/rordy_rose/.nvm/versions/node/v14.16.0/lib/node_modules/firebase-tools/lib/api.js:41:35)
+    at Request.self.callback (/home/rordy_rose/.nvm/versions/node/v14.16.0/lib/node_modules/firebase-tools/node_modules/request/request.js:185:22)
+    at Request.emit (events.js:315:20)
+    at Request.EventEmitter.emit (domain.js:467:12)
+    at Request.<anonymous> (/home/rordy_rose/.nvm/versions/node/v14.16.0/lib/node_modules/firebase-tools/node_modules/request/request.js:1154:10)
+    at Request.emit (events.js:315:20)
+    at Request.EventEmitter.emit (domain.js:467:12)
+    at IncomingMessage.<anonymous> (/home/rordy_rose/.nvm/versions/node/v14.16.0/lib/node_modules/firebase-tools/node_modules/request/request.js:1076:12)
+    at Object.onceWrapper (events.js:421:28)
+    at IncomingMessage.emit (events.js:327:22)
+    at IncomingMessage.EventEmitter.emit (domain.js:467:12)
+    at endReadableNT (internal/streams/readable.js:1327:12)
+    at processTicksAndRejections (internal/process/task_queues.js:80:21)
+[error] 
+[error] Error: Failed to create project because there is already a project with ID netflix-clone. Please try again with a unique project ID.
+[debug] [2021-03-20T13:39:03.612Z] ----------------------------------------------------------------------
+[debug] [2021-03-20T13:39:03.614Z] Command:       /home/rordy_rose/.nvm/versions/node/v14.16.0/bin/node /home/rordy_rose/.nvm/versions/node/v14.16.0/bin/firebase init
+[debug] [2021-03-20T13:39:03.614Z] CLI Version:   9.6.1
+[debug] [2021-03-20T13:39:03.614Z] Platform:      linux
+[debug] [2021-03-20T13:39:03.614Z] Node Version:  v14.16.0
+[debug] [2021-03-20T13:39:03.615Z] Time:          Sat Mar 20 2021 22:39:03 GMT+0900 (Japan Standard Time)
+[debug] [2021-03-20T13:39:03.615Z] ----------------------------------------------------------------------
+[debug] [2021-03-20T13:39:03.615Z] 
+[debug] [2021-03-20T13:39:03.618Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-03-20T13:39:03.618Z] > authorizing via signed-in user
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /home/rordy_rose/netflix-clone
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project. 
+[debug] [2021-03-20T13:39:26.205Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects  
+ {"projectId":"rose-netflix-clone","name":"rordy_rose_netflix_clone"}
+[debug] [2021-03-20T13:39:26.408Z] <<< HTTP RESPONSE 400 {"vary":"X-Origin, Referer, Origin,Accept-Encoding","content-type":"application/json; charset=UTF-8","date":"Sat, 20 Mar 2021 13:39:25 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=107","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-03-20T13:39:26.408Z] <<< HTTP RESPONSE BODY {"error":{"code":400,"message":"field [display_name] has issue [project display name contains invalid characters]","status":"INVALID_ARGUMENT","details":[{"@type":"type.googleapis.com/google.rpc.BadRequest","fieldViolations":[{"field":"display_name","description":"project display name contains invalid characters"}]},{"@type":"type.googleapis.com/google.rpc.Help","links":[{"url":"https://cloud.google.com/resource-manager/reference/rest/v1/projects"}]}]}}
+[debug] [2021-03-20T13:39:26.411Z] FirebaseError: HTTP Error: 400, field [display_name] has issue [project display name contains invalid characters]
+    at module.exports (/home/rordy_rose/.nvm/versions/node/v14.16.0/lib/node_modules/firebase-tools/lib/responseToError.js:38:12)
+    at Request._callback (/home/rordy_rose/.nvm/versions/node/v14.16.0/lib/node_modules/firebase-tools/lib/api.js:41:35)
+    at Request.self.callback (/home/rordy_rose/.nvm/versions/node/v14.16.0/lib/node_modules/firebase-tools/node_modules/request/request.js:185:22)
+    at Request.emit (events.js:315:20)
+    at Request.EventEmitter.emit (domain.js:467:12)
+    at Request.<anonymous> (/home/rordy_rose/.nvm/versions/node/v14.16.0/lib/node_modules/firebase-tools/node_modules/request/request.js:1154:10)
+    at Request.emit (events.js:315:20)
+    at Request.EventEmitter.emit (domain.js:467:12)
+    at IncomingMessage.<anonymous> (/home/rordy_rose/.nvm/versions/node/v14.16.0/lib/node_modules/firebase-tools/node_modules/request/request.js:1076:12)
+    at Object.onceWrapper (events.js:421:28)
+    at IncomingMessage.emit (events.js:327:22)
+    at IncomingMessage.EventEmitter.emit (domain.js:467:12)
+    at endReadableNT (internal/streams/readable.js:1327:12)
+    at processTicksAndRejections (internal/process/task_queues.js:80:21)
+[error] 
+[error] Error: Failed to create project. See firebase-debug.log for more info.
+[debug] [2021-03-20T13:39:32.784Z] ----------------------------------------------------------------------
+[debug] [2021-03-20T13:39:32.785Z] Command:       /home/rordy_rose/.nvm/versions/node/v14.16.0/bin/node /home/rordy_rose/.nvm/versions/node/v14.16.0/bin/firebase init
+[debug] [2021-03-20T13:39:32.785Z] CLI Version:   9.6.1
+[debug] [2021-03-20T13:39:32.785Z] Platform:      linux
+[debug] [2021-03-20T13:39:32.786Z] Node Version:  v14.16.0
+[debug] [2021-03-20T13:39:32.786Z] Time:          Sat Mar 20 2021 22:39:32 GMT+0900 (Japan Standard Time)
+[debug] [2021-03-20T13:39:32.786Z] ----------------------------------------------------------------------
+[debug] [2021-03-20T13:39:32.786Z] 
+[debug] [2021-03-20T13:39:32.789Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-03-20T13:39:32.789Z] > authorizing via signed-in user
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /home/rordy_rose/netflix-clone
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project. 
+[debug] [2021-03-20T13:39:51.354Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects  
+ {"projectId":"rose-netflix-clone","name":"rordy-rose-netflix-clone"}
+[debug] [2021-03-20T13:39:52.242Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sat, 20 Mar 2021 13:39:51 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=787","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-03-20T13:39:52.244Z] > refreshing access token with scopes: []
+[debug] [2021-03-20T13:39:52.245Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-03-20T13:39:52.393Z] <<< HTTP RESPONSE 200 {"date":"Sat, 20 Mar 2021 13:39:51 GMT","pragma":"no-cache","cache-control":"no-cache, no-store, max-age=0, must-revalidate","expires":"Mon, 01 Jan 1990 00:00:00 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-03-20T13:39:52.407Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.7104159489450822966 [none]
+[debug] [2021-03-20T13:39:53.212Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.7104159489450822966 200
+[debug] [2021-03-20T13:39:53.213Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.7104159489450822966 {"name":"operations/cp.7104159489450822966"}
+[debug] [2021-03-20T13:39:53.713Z] [Project Creation Poller] Retrying task index 0
+[debug] [2021-03-20T13:39:53.713Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.7104159489450822966 [none]
+[debug] [2021-03-20T13:39:54.507Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.7104159489450822966 200
+[debug] [2021-03-20T13:39:54.507Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.7104159489450822966 {"name":"operations/cp.7104159489450822966","metadata":{"@type":"type.googleapis.com/google.cloudresourcemanager.v1.ProjectCreationStatus","gettable":true}}
+[debug] [2021-03-20T13:39:55.506Z] [Project Creation Poller] Retrying task index 0
+[debug] [2021-03-20T13:39:55.507Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.7104159489450822966 [none]
+[debug] [2021-03-20T13:39:56.335Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.7104159489450822966 200
+[debug] [2021-03-20T13:39:56.335Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.7104159489450822966 {"name":"operations/cp.7104159489450822966","metadata":{"@type":"type.googleapis.com/google.cloudresourcemanager.v1.ProjectCreationStatus","gettable":true,"ready":true},"done":true,"response":{"@type":"type.googleapis.com/google.cloudresourcemanager.v1.Project","projectNumber":"1042864274884","projectId":"rose-netflix-clone","lifecycleState":"ACTIVE","name":"rordy-rose-netflix-clone","createTime":"2021-03-20T13:39:51.094Z"}}
+[debug] [2021-03-20T13:39:56.336Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-03-20T13:39:56.337Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-03-20T13:39:56.469Z] <<< HTTP RESPONSE 200 {"expires":"Mon, 01 Jan 1990 00:00:00 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","pragma":"no-cache","date":"Sat, 20 Mar 2021 13:39:55 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-03-20T13:39:56.475Z] >>> HTTP REQUEST POST https://firebase.googleapis.com/v1beta1/projects/rose-netflix-clone:addFirebase  
+ 
+[debug] [2021-03-20T13:39:57.564Z] <<< HTTP RESPONSE 403 {"vary":"X-Origin, Referer, Origin,Accept-Encoding","content-type":"application/json; charset=UTF-8","date":"Sat, 20 Mar 2021 13:39:56 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-03-20T13:39:57.564Z] <<< HTTP RESPONSE BODY {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2021-03-20T13:39:57.566Z] HTTP Error: 403, The caller does not have permission
+[debug] [2021-03-20T13:39:57.567Z] FirebaseError: HTTP Error: 403, The caller does not have permission
+    at module.exports (/home/rordy_rose/.nvm/versions/node/v14.16.0/lib/node_modules/firebase-tools/lib/responseToError.js:38:12)
+    at Request._callback (/home/rordy_rose/.nvm/versions/node/v14.16.0/lib/node_modules/firebase-tools/lib/api.js:41:35)
+    at Request.self.callback (/home/rordy_rose/.nvm/versions/node/v14.16.0/lib/node_modules/firebase-tools/node_modules/request/request.js:185:22)
+    at Request.emit (events.js:315:20)
+    at Request.EventEmitter.emit (domain.js:467:12)
+    at Request.<anonymous> (/home/rordy_rose/.nvm/versions/node/v14.16.0/lib/node_modules/firebase-tools/node_modules/request/request.js:1154:10)
+    at Request.emit (events.js:315:20)
+    at Request.EventEmitter.emit (domain.js:467:12)
+    at IncomingMessage.<anonymous> (/home/rordy_rose/.nvm/versions/node/v14.16.0/lib/node_modules/firebase-tools/node_modules/request/request.js:1076:12)
+    at Object.onceWrapper (events.js:421:28)
+    at IncomingMessage.emit (events.js:327:22)
+    at IncomingMessage.EventEmitter.emit (domain.js:467:12)
+    at endReadableNT (internal/streams/readable.js:1327:12)
+    at processTicksAndRejections (internal/process/task_queues.js:80:21)
+[error] 
+[error] Error: Failed to add Firebase to Google Cloud Platform project. See firebase-debug.log for more info.

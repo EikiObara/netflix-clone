@@ -4,6 +4,7 @@ import requests from "../utils/request";
 import axios from "../utils/axios";
 
 import "./Banner.scss";
+import Nav from "./Nav";
 
 type movieProps = {
   title?: string;
@@ -41,6 +42,8 @@ const Banner = () => {
 
   if(banner_url){
     return (
+      <>
+      <Nav />
       <header
         className="Banner"
         style={{
@@ -62,10 +65,12 @@ const Banner = () => {
         </div>
         <div className="Banner-fadeBottom" />
       </header>
+      </>
     )
   }else{
     return(
       <>
+      Loading ...
       </>
     )
   }
